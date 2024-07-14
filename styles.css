@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+.payment-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ajustar el ancho del formulario para dispositivos móviles */
+    max-width: 900px;
+    overflow: hidden; /* Evitar desbordamiento en dispositivos pequeños */
+}
+
+.payment-form form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px; /* Aumentar el espacio entre las filas */
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 10px; /* Espacio entre grupos de campos */
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 7px); /* Ajustar el ancho para compensar el margen */
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 2px; /* Espacio entre inputs */
+}
+
+.amount-container {
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    margin-right: 5px;
+}
+
+.card-type-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.message-group {
+    flex: 1;
+}
+
+.card-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-option {
+    display: flex;
+    align-items: center;
+}
+
+.card-option input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.card-option label {
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-option input[type="radio"]:checked + label {
+    color: #000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.buttons button {
+    width: 100px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.buttons button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .form-group {
+        margin-bottom: 8px; /* Reducir el espacio entre grupos de campos */
+    }
+
+    .buttons button {
+        width: auto; /* Botones con ancho automático en dispositivos móviles */
+        padding: 8px 12px; /* Ajuste de relleno de botones */
+        font-size: 12px; /* Tamaño de fuente más pequeño para botones en dispositivos móviles */
+    }
+}
