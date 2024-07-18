@@ -128,12 +128,20 @@ body {
 
 @media screen and (max-width: 600px) {
     .form-group {
+        flex: 0 0 100%; /* Hacer que cada grupo ocupe el 100% del ancho */
         margin-bottom: 8px; /* Reducir el espacio entre grupos de campos */
+    }
+
+    .buttons {
+        flex-direction: column; /* Alinear botones verticalmente */
+        align-items: stretch; /* Alinear botones al ancho completo */
     }
 
     .buttons button {
         width: auto; /* Botones con ancho automático en dispositivos móviles */
         padding: 8px 12px; /* Ajuste de relleno de botones */
         font-size: 12px; /* Tamaño de fuente más pequeño para botones en dispositivos móviles */
+        margin-left: 0; /* Eliminar margen izquierdo en botones */
+        margin-bottom: 10px; /* Espacio entre botones */
     }
 }
